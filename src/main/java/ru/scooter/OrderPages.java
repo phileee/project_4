@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 
 import org.junit.Assert;
 
+import java.util.Objects;
+
 public class OrderPages {
 
     // кнопка заказа в хедере на главной странице
@@ -114,9 +116,9 @@ public class OrderPages {
     }
 
     public void setColor(String color) {
-        if (color == "чёрный жемчуг") {
+        if (Objects.equals(color, "чёрный жемчуг")) {
             driver.findElement(checkboxColorBlack).click();
-        } else if (color == "серая безысходность") {
+        } else if (Objects.equals(color, "серая безысходность")) {
             driver.findElement(checkboxColorGrey).click();
         }
     }
